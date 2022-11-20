@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:'Bitter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +11,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.gradientLetters{
+  color:transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(90deg, #F4A261 0%, #E76F51 100%)
+}
+.reverseGradient{
+  color:transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(180deg, #F4A261 0%, #E76F51 100%) !important;
+  transition: all ease 1s;
 }
