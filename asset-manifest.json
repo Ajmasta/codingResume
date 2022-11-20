@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/codingresume/static/css/main.8eef18ae.css",
-    "main.js": "/codingresume/static/js/main.ff5287c7.js",
-    "static/js/787.8ce0188d.chunk.js": "/codingresume/static/js/787.8ce0188d.chunk.js",
-    "static/media/metapass.png": "/codingresume/static/media/metapass.ba3dbc7bf78e5ecde272.png",
-    "static/media/adrien.jpg": "/codingresume/static/media/adrien.1a1035a86b5958bca9ae.jpg",
-    "static/media/aethermarketIntro.png": "/codingresume/static/media/aethermarketIntro.8da5e46c75994a384fd9.png",
-    "static/media/uncovrLogo.png": "/codingresume/static/media/uncovrLogo.f4cd98d8dbecbcf072d2.png",
-    "static/media/uncovrPhone.png": "/codingresume/static/media/uncovrPhone.c896dc2b2037619e1a82.png",
-    "static/media/firstPanelCircle.svg": "/codingresume/static/media/firstPanelCircle.8249e9344161db9d03b77a7d76c9873a.svg",
-    "static/media/github.png": "/codingresume/static/media/github.05f6c17b8cd04c28456f.png",
-    "static/media/logo.svg": "/codingresume/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/codingresume/index.html",
-    "main.8eef18ae.css.map": "/codingresume/static/css/main.8eef18ae.css.map",
-    "main.ff5287c7.js.map": "/codingresume/static/js/main.ff5287c7.js.map",
-    "787.8ce0188d.chunk.js.map": "/codingresume/static/js/787.8ce0188d.chunk.js.map"
+    "main.css": "/codingResume/static/css/main.8eef18ae.css",
+    "main.js": "/codingResume/static/js/main.a900eb8f.js",
+    "static/js/787.8ce0188d.chunk.js": "/codingResume/static/js/787.8ce0188d.chunk.js",
+    "static/media/metapass.png": "/codingResume/static/media/metapass.ba3dbc7bf78e5ecde272.png",
+    "static/media/adrien.jpg": "/codingResume/static/media/adrien.1a1035a86b5958bca9ae.jpg",
+    "static/media/aethermarketIntro.png": "/codingResume/static/media/aethermarketIntro.8da5e46c75994a384fd9.png",
+    "static/media/uncovrLogo.png": "/codingResume/static/media/uncovrLogo.f4cd98d8dbecbcf072d2.png",
+    "static/media/uncovrPhone.png": "/codingResume/static/media/uncovrPhone.c896dc2b2037619e1a82.png",
+    "static/media/firstPanelCircle.svg": "/codingResume/static/media/firstPanelCircle.8249e9344161db9d03b77a7d76c9873a.svg",
+    "static/media/github.png": "/codingResume/static/media/github.05f6c17b8cd04c28456f.png",
+    "static/media/logo.svg": "/codingResume/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/codingResume/index.html",
+    "main.8eef18ae.css.map": "/codingResume/static/css/main.8eef18ae.css.map",
+    "main.a900eb8f.js.map": "/codingResume/static/js/main.a900eb8f.js.map",
+    "787.8ce0188d.chunk.js.map": "/codingResume/static/js/787.8ce0188d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8eef18ae.css",
-    "static/js/main.ff5287c7.js"
+    "static/js/main.a900eb8f.js"
   ]
 }
