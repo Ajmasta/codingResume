@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import CanvasDraw from "react-canvas-draw";
 import { useEffect, useRef, useState } from "react";
-import { circle } from "../assets/firstPanelCircle.svg";
 import anime from "animejs/lib/anime.es.js";
 
 const MainContainer = styled.div`
@@ -12,6 +10,9 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (max-width: 1000px) {
+    overflow: hidden;
+  }
 `;
 const LeftContainer = styled.div`
   display: flex;
@@ -23,6 +24,11 @@ const LeftContainer = styled.div`
   position: relative;
   left: 50;
   margin-left: 200px;
+  @media (max-width: 1000px) {
+    margin-left: 0px;
+    width: 100%;
+    left: 0;
+  }
 `;
 const RightContainer = styled.div`
   display: flex;
@@ -31,6 +37,9 @@ const RightContainer = styled.div`
   flex-direction: column;
   width: 50%;
   text-align: center;
+  @media (max-width: 1800px) {
+    display: none;
+  }
 `;
 const FirstText = styled.div`
   color: #ffffff;
@@ -38,6 +47,10 @@ const FirstText = styled.div`
   font-size: 80px;
   width: 600px;
   position: relative;
+  @media (max-width: 1000px) {
+    font-size: 40px;
+    width: 300px;
+  }
 `;
 const DescriptionText = styled.p`
   font-size: 30px;
@@ -46,13 +59,22 @@ const DescriptionText = styled.p`
   color: #0e6ba8;
   display: flex;
   width: 600px;
+  @media (max-width: 1000px) {
+    font-size: 20px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 `;
 const CircleContainer = styled.div`
   position: absolute;
   top: -283px;
   left: 266px;
   z-index: 0;
-
+  @media (max-width: 1000px) {
+    display: none;
+  }
   overflow: "hidden";
 `;
 const Canvas = styled.canvas`

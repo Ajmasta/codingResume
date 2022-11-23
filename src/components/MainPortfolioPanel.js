@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import CanvasDraw from "react-canvas-draw";
 import { useEffect, useRef, useState } from "react";
 import { circle } from "../assets/firstPanelCircle.svg";
 import uncovrLogo from "../assets/uncovrPhone.png";
-import aetherPreview from "../assets/aethermarketIntro.png"
-import metapassPreview from "../assets/metapass.png"
+import aetherPreview from "../assets/aethermarketIntro.png";
+import metapassPreview from "../assets/metapass.png";
+import githubLogo from "../assets/github.png";
 
-import anime from "animejs/lib/anime.es.js";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css";
 
 const MainContainer = styled.div`
   background-color: #020c1b;
@@ -15,188 +16,244 @@ const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction:column;
+  flex-direction: column;
   position: relative;
 `;
 const ProjectContainer = styled.div`
-  background-color: #020c1b;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-`
+`;
 const ProjectInfoContainer = styled.div`
-  background-color: #020c1b;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-direction:column;
-  color:#ffffff;
-
-
-`
-const ProjectTitleContainer = styled.div`
-display:flex;
-text-align:left;
-width:100%;
-margin-left:20px;
-justify-content: flex-start;
-align-items: flex-start;
-position: relative;
-`
-const ProjectSummaryContainer = styled.div`
-  background-color: #343434;
-  display:flex;
-  padding:20px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index:1
-`
-const ProjectTechContainer = styled.div`
-  background-color: #020c1b;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-`
-const ProjectLinksContainer = styled.div`
-  background-color: #020c1b;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-`
-const ProjectImageContainer = styled.div`
-  background-color: #020c1b;
-  display:flex;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
-  margin-left:-100px;
-  z-index:0
- 
-`
-const ImgContainer = styled.div`
-    width:580px;
-   height:580px;
-  display:flex;
+  flex-direction: column;
+  color: #ffffff;
+  z-index: 1;
+  text-align: left;
+`;
+const ProjectInfoContainerRight = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  flex-direction: column;
+  color: #ffffff;
+  z-index: 1;
+  text-align: right;
+`;
+const ProjectTitleContainer = styled.div`
+  display: flex;
+  text-align: left;
+  width: 100%;
+  margin-left: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  color: #5ba9f0;
+  font-size: 24px;
+`;
+const ProjectTitleContainerRight = styled.div`
+  display: flex;
+  text-align: right;
+  width: 100%;
+  margin-left: 20px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  color: #5ba9f0;
+  font-size: 24px;
+`;
+const ProjectSummaryContainer = styled.div`
+  background-color: #253a68;
+  max-width: 400px;
+  display: flex;
+  padding: 20px;
   justify-content: center;
   align-items: center;
-  position:relative;
-  background: radial-gradient(50% 50% at 50% 50%, #2C3CCC 0%, rgba(0, 24, 240, 0) 100%);
-  
-`
+  position: relative;
+
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+  font-size: 14px;
+`;
+const ProjectTechContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: ;
+`;
+const ProjectLinksContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+const ProjectImageContainer = styled.div`
+  background-color: #020c1b;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  margin-left: -100px;
+  transition: all 1s ease;
+  &:hover {
+    margin-left: 0px;
+  }
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
+const ProjectImageContainerRight = styled.div`
+  background-color: #020c1b;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  margin-right: -100px;
+  transition: all 1s ease;
+  &:hover {
+    margin-right: 0px;
+  }
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
+const ImgContainer = styled.div`
+  width: 580px;
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #2c3ccc 0%,
+    rgba(0, 24, 240, 0) 100%
+  );
+`;
 const Image = styled.img`
-   width:700px
-`
+  width: 700px;
+`;
 
 const SectionTitle = styled.div`
-font-size:30px;
-color:#ffffff;
-margin-bottom:40px;
-`
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 40px;
+`;
 
 const MainPortfolioPanel = () => {
-  
-    const animation = useRef();
-    useEffect(() => {
-      animation.current = anime.timeline({
-        direction: "normal",
-      });
-  
-      animation.current.add({
-        targets: "#hexagon path",
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: "easeInOutQuart",
-        duration: 1000,
-        delay: 150,
-      });
-    }, []);
-
-
-  const ref = useRef();
-
-  return( <MainContainer >
-    <SectionTitle>
-      Featured projects
-    </SectionTitle>
+  return (
+    <MainContainer>
+      <SectionTitle>Featured projects</SectionTitle>
       <ProjectContainer>
-        <ProjectInfoContainer>
-        <ProjectTitleContainer>
-        Uncovr
-        </ProjectTitleContainer>
-          <ProjectSummaryContainer>
-             
-              A mobile app to let anyone get feedback on their music, and discover new songs. 
-
-          </ProjectSummaryContainer>
-          <ProjectTechContainer>
-            react-native nodeJs MongoDb
-          </ProjectTechContainer>
-          <ProjectLinksContainer>
-            Github Ios Android
-          </ProjectLinksContainer>
-        </ProjectInfoContainer>
-
-        <ProjectImageContainer>
-            <ImgContainer>
-                <Image src={uncovrLogo} />
-            </ImgContainer>
-        </ProjectImageContainer>
-      </ProjectContainer>
-  
-      <ProjectContainer>
-      
-        <ProjectImageContainer>
-              <ImgContainer>
-                  <Image src={aetherPreview} />
-              </ImgContainer>
-          </ProjectImageContainer>
+        <AnimationOnScroll
+          animateIn="animate__fadeInLeft"
+          duration={1}
+          animateOnce={true}
+          style={{ zIndex: 3 }}
+        >
           <ProjectInfoContainer>
-          <ProjectTitleContainer>
-          Uncovr
-          </ProjectTitleContainer>
+            <ProjectTitleContainer>Uncovr</ProjectTitleContainer>
             <ProjectSummaryContainer>
-              
-                A mobile app to let anyone get feedback on their music, and discover new songs. 
-
+              An app I built to let upcoming musicians get feedback on their
+              music, discover new songs and create a bigger fanbase. <br />{" "}
+              <br /> Anyone can upload their songs, ask customized questions and
+              give or receive feedback easily.
+              <br /> <br />
+              Due to this project, my co-founder and I were invited to Neruzh
+              2022 (Armenian Government incubator program) and worked directly
+              with musicians to iterate and improve the app.
             </ProjectSummaryContainer>
             <ProjectTechContainer>
-              react-native nodeJs MongoDb
+              react-native NodeJs MongoDb Express
             </ProjectTechContainer>
-            <ProjectLinksContainer>
-              Github Ios Android
-            </ProjectLinksContainer>
+            <ProjectLinksContainer>Github Ios Android</ProjectLinksContainer>
           </ProjectInfoContainer>
-
-      </ProjectContainer>
-      <ProjectContainer>
-        <ProjectInfoContainer>
-        <ProjectTitleContainer>
-        Uncovr
-        </ProjectTitleContainer>
-          <ProjectSummaryContainer>
-             
-              A mobile app to let anyone get feedback on their music, and discover new songs. 
-
-          </ProjectSummaryContainer>
-          <ProjectTechContainer>
-            react-native nodeJs MongoDb
-          </ProjectTechContainer>
-          <ProjectLinksContainer>
-            Github Ios Android
-          </ProjectLinksContainer>
-        </ProjectInfoContainer>
-
+        </AnimationOnScroll>
         <ProjectImageContainer>
-            <ImgContainer>
-                <Image src={metapassPreview} />
-            </ImgContainer>
+          <ImgContainer>
+            <Image src={uncovrLogo} />
+          </ImgContainer>
         </ProjectImageContainer>
       </ProjectContainer>
-  </MainContainer>)
+
+      <ProjectContainer>
+        <ProjectImageContainerRight>
+          <ImgContainer>
+            <Image src={aetherPreview} />
+          </ImgContainer>
+        </ProjectImageContainerRight>
+        <AnimationOnScroll
+          animateIn="animate__fadeInRight"
+          duration={1}
+          animateOnce={true}
+          style={{ zIndex: 3 }}
+        >
+          <ProjectInfoContainerRight>
+            <ProjectTitleContainerRight>
+              Aethermarket
+            </ProjectTitleContainerRight>
+            <ProjectSummaryContainer>
+              A web-based NFT marketplace on the IMX blockchain. It was featured
+              by a popular youtuber (EllioTrades) and received a decent amount
+              of traffic (1k+ daily). It is now in maintenance mode as I wanted
+              to focus on other projects.
+            </ProjectSummaryContainer>
+            <ProjectTechContainer>NextJS React Express</ProjectTechContainer>
+            <ProjectLinksContainer>
+              <a href="https://github.com/Ajmasta/Aethermarket">
+                <img width="30" src={githubLogo} alt="github Logo" />{" "}
+              </a>{" "}
+              <a href="https://aethermarket-9j2e2usdw-ajmasta.vercel.app/">
+                Website
+              </a>
+            </ProjectLinksContainer>
+          </ProjectInfoContainerRight>
+        </AnimationOnScroll>
+      </ProjectContainer>
+      <ProjectContainer>
+        <AnimationOnScroll
+          animateIn="animate__fadeInLeft"
+          duration={1}
+          animateOnce={true}
+          style={{ zIndex: 3 }}
+        >
+          <ProjectInfoContainer>
+            <ProjectTitleContainer>Metapass</ProjectTitleContainer>
+            <ProjectSummaryContainer>
+              Metapass is a project that uses DIDs (Decentralized Identifiers)
+              to help anyone manage their online identity. The app lets anyone
+              create a Digital ID, and scan QR codes to login or send any
+              information they want.
+              <br /> <br />I built the landing page and the app, but the app is
+              currently a MVP and not available to the public. I am currently
+              working on the codebase to make it opensource.
+            </ProjectSummaryContainer>
+            <ProjectTechContainer>
+              react-native nodeJs MongoDb Ethers Veramo
+            </ProjectTechContainer>
+            <ProjectLinksContainer>
+              <a href="https://github.com/Ajmasta/metapasslanding">
+                <img width="30" src={githubLogo} alt="github Logo" />
+              </a>{" "}
+              Landing Page
+            </ProjectLinksContainer>
+          </ProjectInfoContainer>
+        </AnimationOnScroll>
+
+        <ProjectImageContainer>
+          <ImgContainer>
+            <Image src={metapassPreview} />
+          </ImgContainer>
+        </ProjectImageContainer>
+      </ProjectContainer>
+    </MainContainer>
+  );
 };
 
 export default MainPortfolioPanel;
