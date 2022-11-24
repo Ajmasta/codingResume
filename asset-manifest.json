@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/codingResume/static/css/main.5b65b528.css",
-    "main.js": "/codingResume/static/js/main.962e1ae0.js",
+    "main.js": "/codingResume/static/js/main.d5cd751d.js",
     "static/js/787.8ce0188d.chunk.js": "/codingResume/static/js/787.8ce0188d.chunk.js",
     "static/media/metapass.png": "/codingResume/static/media/metapass.ba3dbc7bf78e5ecde272.png",
     "static/media/portraitOrangeBg.png": "/codingResume/static/media/portraitOrangeBg.aa4123d28b19c89dcbb0.png",
@@ -14,11 +14,11 @@
     "static/media/playstore.png": "/codingResume/static/media/playstore.23f630669d8da5a9a1e4.png",
     "index.html": "/codingResume/index.html",
     "main.5b65b528.css.map": "/codingResume/static/css/main.5b65b528.css.map",
-    "main.962e1ae0.js.map": "/codingResume/static/js/main.962e1ae0.js.map",
+    "main.d5cd751d.js.map": "/codingResume/static/js/main.d5cd751d.js.map",
     "787.8ce0188d.chunk.js.map": "/codingResume/static/js/787.8ce0188d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b65b528.css",
-    "static/js/main.962e1ae0.js"
+    "static/js/main.d5cd751d.js"
   ]
 }
