@@ -15,12 +15,13 @@ const OverallContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 1;
+  font-size: 18px;
 `;
 const MainContainer = styled.div`
   background-color: #020c1b;
 
   margin-top: 20px;
-
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,9 +60,10 @@ const Title = styled.span`
 `;
 const LeftContainer = styled.div`
   width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
   @media (max-width: 1000px) {
     width: 100%;
@@ -70,9 +72,10 @@ const LeftContainer = styled.div`
 `;
 const RightContainer = styled.div`
   width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-left: 20px;
   @media (max-width: 1000px) {
@@ -84,7 +87,6 @@ const ImgContainer = styled.div`
   width: 500px;
   position: relative;
   border-radius: 10%;
-  position: absolute;
 `;
 
 const Img = styled.img`
@@ -141,31 +143,26 @@ const BioPanel = () => {
         <MainContainer>
           <LeftContainer>
             <BioContainer>
-              I am a <EmphasizedWord>self-taught</EmphasizedWord> developper who
+              I am a <EmphasizedWord>self-taught</EmphasizedWord> developer who
               loves to build new things using a wide variety of technologies.
               From interactive <EmphasizedWord>front-end</EmphasizedWord>{" "}
               experiences, to intricate{" "}
               <EmphasizedWord>back-ends</EmphasizedWord> and safe
-              <EmphasizedWord> smart contracts</EmphasizedWord>, I love to turn
-              any good idea into reality. This passion of mine has led me
-              towards building my own projects, co-founding a{" "}
+              <EmphasizedWord> smart contracts</EmphasizedWord>. <br /> <br /> I
+              love to turn any good idea into reality. This passion of mine has
+              led me towards building my own projects, co-founding a{" "}
               <EmphasizedWord>startup</EmphasizedWord>, and working as an{" "}
-              <EmphasizedWord>independent contractor</EmphasizedWord> to help
-              web agencies build beautiful apps for their clients.
+              <EmphasizedWord>independent contractor</EmphasizedWord> working
+              mostly with web agencies to help them build beautiful apps for
+              their clients.
               <br /> <br /> <br />
-              While I started coding as a simple hobby, my friends and relatives
-              quickly asked me to build websites for them. I quickly realized I
-              could make a living out of this so I started taking requests from
-              clients. This is how I landed my first official job as a fullstack
-              developper at
-              <EmphasizedWord> Phoenix GMI</EmphasizedWord> . The better I got,
-              the more I worked on my own project and I decided in 2021 to
-              co-found my own startup, which is currently in the{" "}
-              <EmphasizedWord> McGill Dobson Incubator Program</EmphasizedWord>,
-              and to have more time for myself by working as an independent
-              contractor. Since then, I've been working with{" "}
-              <EmphasizedWord>web agencies</EmphasizedWord> , individual
-              clients, and companies to turn their vision into reality.
+              After working as a freelancer I landed my first company job as a
+              fullstack developer at
+              <EmphasizedWord> Phoenix GMI</EmphasizedWord>. As I accumulated
+              experience, I decided in 2021 to co-found my own startup,{" "}
+              <EmphasizedWord>Back To Health</EmphasizedWord>, which is
+              currently in the{" "}
+              <EmphasizedWord> McGill Dobson Incubator Program</EmphasizedWord>.
               <br /> <br />
               Here is a sample of technologies I use:
               <ListsContainer>

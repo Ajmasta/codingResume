@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
 import { circle } from "../assets/firstPanelCircle.svg";
 import uncovrLogo from "../assets/uncovrLogo.png";
-import browser from "../assets/monitor.png";
+import browser from "../assets/link.png";
 import githubLogo from "../assets/github.png";
 import mobileLogo from "../assets/smartphone.png";
 import { AnimationOnScroll } from "react-animation-on-scroll";
@@ -59,44 +59,46 @@ const ProjectBox = ({ website, mobile, github, title, description, techs }) => {
   return (
     <AnimationOnScroll
       animateIn="animate__bounceInDown"
-      duration={2}
+      duration={1}
       animateOnce={true}
-      offset={250}
+      offset={200}
     >
-      <ProjectContainer className="card" onMouseMove={handleOnMouseMove}>
-        <div className="card-content">
-          <ProjectTitle>{title}</ProjectTitle>
-          <ProjectDescription>{description}</ProjectDescription>
-          <ProjectTech>
-            {techs.map((tech, i) => (
-              <p key={`tech${i}`}>{tech} </p>
-            ))}
-          </ProjectTech>
-          <ProjectHeader>
-            {website ? (
-              <a href={website} target="_blank">
-                <img src={browser} width={20} />
-              </a>
-            ) : (
-              ""
-            )}
-            {mobile ? (
-              <a href={mobile} target="_blank">
-                <img src={mobileLogo} width={20} />
-              </a>
-            ) : (
-              ""
-            )}
-            {github ? (
-              <a href={github} target="_blank">
-                <img src={githubLogo} width={20} />
-              </a>
-            ) : (
-              ""
-            )}
-          </ProjectHeader>
-        </div>
-      </ProjectContainer>
+      <a href={website} target="_blank">
+        <ProjectContainer className="card" onMouseMove={handleOnMouseMove}>
+          <div className="card-content">
+            <ProjectTitle>{title}</ProjectTitle>
+            <ProjectDescription>{description}</ProjectDescription>
+            <ProjectTech>
+              {techs.map((tech, i) => (
+                <p key={`tech${i}`}>{tech} </p>
+              ))}
+            </ProjectTech>
+            <ProjectHeader>
+              {website ? (
+                <a href={website} target="_blank">
+                  <img src={browser} width={20} />
+                </a>
+              ) : (
+                ""
+              )}
+              {mobile ? (
+                <a href={mobile} target="_blank">
+                  <img src={mobileLogo} width={20} />
+                </a>
+              ) : (
+                ""
+              )}
+              {github ? (
+                <a href={github} target="_blank">
+                  <img src={githubLogo} width={20} />
+                </a>
+              ) : (
+                ""
+              )}
+            </ProjectHeader>
+          </div>
+        </ProjectContainer>
+      </a>
     </AnimationOnScroll>
   );
 };

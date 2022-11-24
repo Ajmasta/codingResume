@@ -77,14 +77,37 @@ const CircleContainer = styled.div`
   }
   overflow: "hidden";
 `;
-const Canvas = styled.canvas`
-  background-color: 1c1c1c;
-`;
+
 const Name = styled.span`
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(90deg, #5ba9f0 0%, #4941a5 100%);
+`;
+const ContactButton = styled.a`
+  background-color: transparent;
+  border: 1px solid #5ba9f0;
+  width: 200px;
+  height: 70px;
+  font-size: 20px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  align-self: flex-start;
+  margin-left: 200px;
+  color: #5ba9f0;
+  text-decoration: none;
+
+  @media (max-width: 1000px) {
+    margin-left: 0px;
+    align-self: center;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(91, 169, 240, 0.2);
+  }
 `;
 const IntroPanel = () => {
   const animation = useRef();
@@ -102,18 +125,11 @@ const IntroPanel = () => {
     });
   }, []);
 
-  const [brushSize, setBrushSize] = useState(1);
-  const [color, setColor] = useState("#2a9d8f");
-  const [image, setImage] = useState("");
-  const [classy, setClassy] = useState(false);
-  const ref = useRef();
-
   return (
-    <MainContainer ref={ref}>
+    <MainContainer>
       <LeftContainer>
         <FirstText>
-          Hi, my <br /> name is{" "}
-          <Name className={classy ? "reverseGradient" : ""}>Adrien.</Name>
+          Hi, my <br /> name is <Name>Adrien.</Name>
           <CircleContainer>
             <svg
               ref={animation}
@@ -143,6 +159,9 @@ const IntroPanel = () => {
           I am a fullstack developper passionate about turning great ideas into
           beautiful web and mobile apps.
         </DescriptionText>
+        <ContactButton href="mailto:adrien.moevus@gmail.com">
+          Contact me
+        </ContactButton>
       </LeftContainer>
       <RightContainer></RightContainer>
     </MainContainer>

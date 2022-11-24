@@ -5,6 +5,9 @@ import uncovrLogo from "../assets/uncovrPhone.png";
 import aetherPreview from "../assets/aethermarketIntro.png";
 import metapassPreview from "../assets/metapass.png";
 import githubLogo from "../assets/github.png";
+import linkIcon from "../assets/link.png";
+import playstore from "../assets/playstore.png";
+import appstore from "../assets/appstore.png";
 
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css";
@@ -48,7 +51,7 @@ const ProjectInfoContainerRight = styled.div`
 const ProjectTitleContainer = styled.div`
   display: flex;
   text-align: left;
-  width: 100%;
+
   margin-left: 20px;
   justify-content: flex-start;
   align-items: flex-start;
@@ -78,20 +81,27 @@ const ProjectSummaryContainer = styled.div`
 
   border-radius: 10px;
   box-shadow: 1px 1px 5px black;
-  font-size: 14px;
+  font-size: 18px;
 `;
 const ProjectTechContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  color: ;
+  margin-top: 10px;
+  color: #f4a261;
+  @media (max-width: 1000px) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 `;
 const ProjectLinksContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  margin-top: 10px;
   align-items: center;
   position: relative;
+  width: 150px;
 `;
 const ProjectImageContainer = styled.div`
   background-color: #020c1b;
@@ -164,15 +174,21 @@ const MainPortfolioPanel = () => {
               music, discover new songs and create a bigger fanbase. <br />{" "}
               <br /> Anyone can upload their songs, ask customized questions and
               give or receive feedback easily.
-              <br /> <br />
-              Due to this project, my co-founder and I were invited to Neruzh
-              2022 (Armenian Government incubator program) and worked directly
-              with musicians to iterate and improve the app.
             </ProjectSummaryContainer>
             <ProjectTechContainer>
               react-native NodeJs MongoDb Express
             </ProjectTechContainer>
-            <ProjectLinksContainer>Github Ios Android</ProjectLinksContainer>
+            <ProjectLinksContainer>
+              <a href="https://play.google.com/store/apps/details?id=com.uncovr.pluszero&fbclid=IwAR3oX2XtdJB7FNfweIhddgGaXguIiFMbsvxwxAYcYcGcZ_eX5KNmC6A8kVA">
+                <img width="25" src={playstore} alt="playstore icon" />{" "}
+              </a>
+              <a href="https://apps.apple.com/app/uncovr-music/id1644635935?platform=iphone">
+                <img width="25" src={appstore} alt="appstore icon" />{" "}
+              </a>
+              <a href="https://uncovr.xyz">
+                <img width="25" src={linkIcon} alt="link icon" />{" "}
+              </a>
+            </ProjectLinksContainer>
           </ProjectInfoContainer>
         </AnimationOnScroll>
         <ProjectImageContainer>
@@ -201,16 +217,17 @@ const MainPortfolioPanel = () => {
             <ProjectSummaryContainer>
               A web-based NFT marketplace on the IMX blockchain. It was featured
               by a popular youtuber (EllioTrades) and received a decent amount
-              of traffic (1k+ daily). It is now in maintenance mode as I wanted
-              to focus on other projects.
+              of traffic (1k+ daily). <br />
+              It is now in maintenance mode as I wanted to focus on other
+              projects.
             </ProjectSummaryContainer>
             <ProjectTechContainer>NextJS React Express</ProjectTechContainer>
             <ProjectLinksContainer>
               <a href="https://github.com/Ajmasta/Aethermarket">
-                <img width="30" src={githubLogo} alt="github Logo" />{" "}
+                <img width="25" src={githubLogo} alt="github Logo" />{" "}
               </a>{" "}
               <a href="https://aethermarket-9j2e2usdw-ajmasta.vercel.app/">
-                Website
+                <img width="25" src={linkIcon} alt="link icon" />{" "}
               </a>
             </ProjectLinksContainer>
           </ProjectInfoContainerRight>
@@ -230,18 +247,19 @@ const MainPortfolioPanel = () => {
               to help anyone manage their online identity. The app lets anyone
               create a Digital ID, and scan QR codes to login or send any
               information they want.
-              <br /> <br />I built the landing page and the app, but the app is
-              currently a MVP and not available to the public. I am currently
-              working on the codebase to make it opensource.
+              <br /> <br />I built a landing page and an app, but the app is
+              currently a MVP and not available to the public.
             </ProjectSummaryContainer>
             <ProjectTechContainer>
               react-native nodeJs MongoDb Ethers Veramo
             </ProjectTechContainer>
             <ProjectLinksContainer>
               <a href="https://github.com/Ajmasta/metapasslanding">
-                <img width="30" src={githubLogo} alt="github Logo" />
+                <img width="25" src={githubLogo} alt="github Logo" />
               </a>{" "}
-              Landing Page
+              <a href="https://ajmasta.github.io/metapasslanding">
+                <img width="25" src={linkIcon} alt="link icon" />{" "}
+              </a>
             </ProjectLinksContainer>
           </ProjectInfoContainer>
         </AnimationOnScroll>

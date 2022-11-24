@@ -11,12 +11,11 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 2;
+  @media (max-width: 600px) {
+    padding-top: 100px;
+  }
 `;
-const SectionTitle = styled.div`
-  font-size: 30px;
-  color: #ffffff;
-  margin-bottom: 40px;
-`;
+
 const TableContainer = styled.div`
   display: flex;
   @media (max-width: 600px) {
@@ -40,8 +39,9 @@ const LeftColumn = styled.div`
 const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 500px;
   height: 400px;
+
   @media (max-width: 600px) {
     width: 300px;
   }
@@ -73,18 +73,18 @@ const RightCell = styled.div`
 `;
 const JobTitle = styled.p`
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
 `;
 const JobEmployer = styled.p`
   margin: 0;
-  font-size: 14px;
-  color: white;
+  font-size: 16px;
+  color: #5ba9f0;
 `;
 const JobDate = styled.p`
   margin: 0;
-  font-size: 12px;
-  color: white;
+  font-size: 14px;
+  color: #f4a261;
 `;
 const DescriptionContainer = styled.div`
   display: flex;
@@ -118,14 +118,19 @@ const Title = styled.span`
     color: transparent;
   }
 `;
-const JobDescription = styled.p``;
+const JobDescription = styled.p`
+  font-size: 18px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+`;
 const work = [
   {
-    title: "Front-end Developper",
+    title: "Front-end developer",
     employer: " Independent Contractor",
     description: [
       "Wrote modern, performant and maintainable code for various clients. Worked closely with web agencies.",
-      "Worked with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, WordPress, Node and NextJs.",
+      "Worked with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, React-native, WordPress, Node and NextJs.",
       "Communicated with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis",
     ],
     date: "2021-Present",
@@ -142,7 +147,7 @@ const work = [
   },
 
   {
-    title: "Fullstack Developper",
+    title: "Fullstack developer",
     employer: "Phoenix GMI",
     description: [
       " Worked with diverse technologies like CRM, Wordpress, or React to take care of the web and IT needs of the comapany",
@@ -152,10 +157,10 @@ const work = [
     date: "2019-2021",
   },
   {
-    title: "Freelancer",
-
+    title: "Full-stack developer",
+    employer: "Freelancer",
     description: [
-      "Started freelancing as a self=taught developper to improve my skills",
+      "Started freelancing as a self=taught developer to improve my skills",
       "Learned to listen to clients' needs and iterate upon products to make them of higher quality",
       "Found creative ways to fullfill customer request by using a variety of technologies ",
     ],
@@ -211,7 +216,7 @@ const ExperiencePanel = () => {
           <RightColumn>
             <RightCell>
               {work[activeJob].description.map((element, i) => (
-                <DescriptionContainer>
+                <DescriptionContainer key={`description${i}`}>
                   <DotList style={{ color: "#5b79c0", fontWeight: "900" }}>
                     -
                   </DotList>
