@@ -11,6 +11,9 @@ const MainContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 50px 0 50px;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 const Email = styled.p`
   color: white;
