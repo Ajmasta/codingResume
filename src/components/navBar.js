@@ -81,7 +81,9 @@ const NavBar = () => {
         <NavigationLink href="#other">
           <Number>4. </Number>Other Projects
         </NavigationLink>
-        <Button>Resume</Button>
+        <NavigationLink href="Adrien_Moevus_Resume.pdf">
+          <Button>Resume</Button>
+        </NavigationLink>
       </NavigationContainer>
     </MainContainer>
   );
