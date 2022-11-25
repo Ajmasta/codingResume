@@ -99,7 +99,7 @@ const ContactButton = styled.a`
   margin-left: 200px;
   color: #5ba9f0;
   text-decoration: none;
-
+  transition: all 0.2s ease;
   @media (max-width: 1000px) {
     margin-left: 0px;
     align-self: center;
@@ -156,7 +156,7 @@ const IntroPanel = () => {
           </CircleContainer>
         </FirstText>
         <DescriptionText>
-          I am a fullstack developper passionate about turning great ideas into
+          I am a fullstack developer passionate about turning great ideas into
           beautiful web and mobile apps.
         </DescriptionText>
         <ContactButton href="mailto:adrien.moevus@gmail.com">

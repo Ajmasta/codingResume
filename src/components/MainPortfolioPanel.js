@@ -158,7 +158,7 @@ const SectionTitle = styled.div`
 
 const MainPortfolioPanel = () => {
   return (
-    <MainContainer>
+    <MainContainer id="feat">
       <SectionTitle>Featured projects</SectionTitle>
       <ProjectContainer>
         <AnimationOnScroll

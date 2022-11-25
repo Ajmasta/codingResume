@@ -127,7 +127,7 @@ const ListsContainer = styled.div`
 const BioPanel = () => {
   const [hover, setHover] = useState(false);
   return (
-    <OverallContainer>
+    <OverallContainer id="bio">
       <AnimationOnScroll
         animateIn="animate__fadeIn"
         duration={2}
@@ -153,13 +153,15 @@ const BioPanel = () => {
               led me towards building my own projects, co-founding a{" "}
               <EmphasizedWord>startup</EmphasizedWord>, and working as an{" "}
               <EmphasizedWord>independent contractor</EmphasizedWord> working
-              mostly with web agencies to help them build beautiful apps for
+              mostly with digital agencies to help them build beautiful apps for
               their clients.
-              <br /> <br /> <br />
-              After working as a freelancer I landed my first company job as a
-              fullstack developer at
-              <EmphasizedWord> Phoenix GMI</EmphasizedWord>. As I accumulated
-              experience, I decided in 2021 to co-found my own startup,{" "}
+              <br /> <br />I started my carreer as a freelancer, which landed me
+              a job as a fullstack developer at{" "}
+              <EmphasizedWord>Bureau Billy</EmphasizedWord>, a digital agency. I
+              was then hired at <EmphasizedWord> Phoenix GMI</EmphasizedWord>,
+              where I helped build a strong digital strategy for the company.{" "}
+              <br /> <br /> As I accumulated experience, I decided in 2021 to
+              co-found my own startup,{" "}
               <EmphasizedWord>Back To Health</EmphasizedWord>, which is
               currently in the{" "}
               <EmphasizedWord> McGill Dobson Incubator Program</EmphasizedWord>.

@@ -33,7 +33,7 @@ const SectionTitle = styled.div`
 
 const AllPortfolioPanel = () => {
   return (
-    <MainContainer>
+    <MainContainer id="other">
       <SectionTitle>Other projects</SectionTitle>
 
       <AllProjectsContainer id="cards">

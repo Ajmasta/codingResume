@@ -15,7 +15,7 @@ const ContactButton = styled.a`
   align-self: flex-start;
   color: #5ba9f0;
   text-decoration: none;
-
+  transition: all 0.2s ease;
   margin-top: 100px;
   @media (max-width: 1000px) {
     margin-left: 0px;

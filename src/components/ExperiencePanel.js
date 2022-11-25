@@ -40,7 +40,7 @@ const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 400px;
+  height: 500px;
 
   @media (max-width: 600px) {
     width: 300px;
@@ -126,8 +126,8 @@ const JobDescription = styled.p`
 `;
 const work = [
   {
-    title: "Front-end developer",
-    employer: " Independent Contractor",
+    title: "Frontend developer",
+    employer: " Independent Contractors",
     description: [
       "Wrote modern, performant and maintainable code for various clients. Worked closely with web agencies.",
       "Worked with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, React-native, WordPress, Node and NextJs.",
@@ -147,40 +147,39 @@ const work = [
   },
 
   {
-    title: "Fullstack developer",
+    title: "Frontend developer",
     employer: "Phoenix GMI",
     description: [
-      " Worked with diverse technologies like CRM, Wordpress, or React to take care of the web and IT needs of the comapany",
+      " Worked with diverse technologies like CRM, Wordpress, or React to take care of the web and IT needs of the company",
       "Communicated on a weekly basis with teams of marketers, content creators, and designers to create new products.",
-      "Had to find creative ways to create products maintainable by non-engineers.",
+      "Helped with important decisions on the digital strategy of the company.",
     ],
-    date: "2019-2021",
+    date: "2020-2021",
   },
   {
-    title: "Full-stack developer",
+    title: "Fullstack developer",
+    employer: "Bureau Billy",
+    description: [
+      "Worked with SCRUM / Agile methodologies to meet deadlines and organize teamwork amongst multidisciplinary teams.",
+      "Worked in a team of developers and designers to produce high quality digital products for clients.",
+      "Used a wide variety of technologies, mostly MERN stack (MongoDb, Express, React, Node), and react-native.",
+    ],
+    date: "2019-2020",
+  },
+  {
+    title: "Fullstack developer",
     employer: "Freelancer",
     description: [
-      "Started freelancing as a self=taught developer to improve my skills",
-      "Learned to listen to clients' needs and iterate upon products to make them of higher quality",
-      "Found creative ways to fullfill customer request by using a variety of technologies ",
+      "Learned to talk with clients and answer their needs",
+      "Built websites with various technologies, such as React, Vanilla JS, Node, MongoDB, SQL.",
     ],
-    date: "2018-2019",
-  },
-  {
-    title: "Teacher Assistant",
-    employer: "McGill University",
-    description: [
-      "Helped students understand and integrate the material",
-      "Prepared classes and answered questions in person or via email",
-      "Led class discussions",
-    ],
-    date: "2018-2019",
+    date: "2019",
   },
 ];
 const ExperiencePanel = () => {
   const [activeJob, setActiveJob] = useState(0);
   return (
-    <MainContainer>
+    <MainContainer id="xp">
       <Title>Work Experience</Title>
       <TableContainer>
         <AnimationOnScroll
