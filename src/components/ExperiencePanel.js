@@ -127,7 +127,7 @@ const JobDescription = styled.p`
 const work = [
   {
     title: "Frontend developer",
-    employer: " Independent Contractors",
+    employer: "Freelancer",
     description: [
       "Wrote modern, performant and maintainable code for various clients. Worked closely with web agencies.",
       "Worked with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, React-native, WordPress, Node and NextJs.",
