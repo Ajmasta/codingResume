@@ -67,7 +67,10 @@ const NavBar = () => {
         <Logo href="https://github.com/Ajmasta" target="_blank">
           <img width={25} src={githubLogo} />
         </Logo>
-        <Logo href="" target="_blank">
+        <Logo
+          href="https://www.linkedin.com/in/adrien-moevus-12249180/"
+          target="_blank"
+        >
           <img width={25} src={linkedinLogo} />
         </Logo>
       </LogoContainer>

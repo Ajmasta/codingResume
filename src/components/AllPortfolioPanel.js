@@ -38,6 +38,12 @@ const AllPortfolioPanel = () => {
 
       <AllProjectsContainer id="cards">
         <ProjectBox
+          github="https://github.com/Ajmasta/ThisCover"
+          title="ThisCover"
+          description="A react-native app that helps you find your next favorite book."
+          techs={["React-native", "react-reanimated-2"]}
+        />
+        <ProjectBox
           website="https://ajmasta.github.io/unitopia/"
           github="https://github.com/Ajmasta/unitopia"
           title="Unitopia"
