@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.0fb5cafa.css",
-    "main.js": "/static/js/main.54944a4e.js",
+    "main.js": "/static/js/main.7ce2e61e.js",
     "static/js/787.8ce0188d.chunk.js": "/static/js/787.8ce0188d.chunk.js",
     "static/media/metapass.png": "/static/media/metapass.ba3dbc7bf78e5ecde272.png",
-    "static/media/portraitOrangeBg.png": "/static/media/portraitOrangeBg.aa4123d28b19c89dcbb0.png",
     "static/media/adrien.jpg": "/static/media/adrien.1a1035a86b5958bca9ae.jpg",
     "static/media/aethermarketIntro.png": "/static/media/aethermarketIntro.8da5e46c75994a384fd9.png",
     "static/media/uncovrLogo.png": "/static/media/uncovrLogo.f4cd98d8dbecbcf072d2.png",
+    "static/media/portraitGreenBg.jpg": "/static/media/portraitGreenBg.b52d786d63005cb0fb03.jpg",
     "static/media/uncovrPhone.png": "/static/media/uncovrPhone.c896dc2b2037619e1a82.png",
-    "static/media/firstPanelCircle.svg": "/static/media/firstPanelCircle.8249e9344161db9d03b77a7d76c9873a.svg",
+    "static/media/firstPanelCircle.svg": "/static/media/firstPanelCircle.f1a710f74f917a921d9247287e64df5e.svg",
     "static/media/appstore.png": "/static/media/appstore.2be29c88bfd54927d5e2.png",
     "static/media/playstore.png": "/static/media/playstore.23f630669d8da5a9a1e4.png",
     "static/media/linkedin.png": "/static/media/linkedin.5fcea17ac9c3eb1ab0ff.png",
     "index.html": "/index.html",
     "main.0fb5cafa.css.map": "/static/css/main.0fb5cafa.css.map",
-    "main.54944a4e.js.map": "/static/js/main.54944a4e.js.map",
+    "main.7ce2e61e.js.map": "/static/js/main.7ce2e61e.js.map",
     "787.8ce0188d.chunk.js.map": "/static/js/787.8ce0188d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0fb5cafa.css",
-    "static/js/main.54944a4e.js"
+    "static/js/main.7ce2e61e.js"
   ]
 }
