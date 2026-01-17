@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import pixelArt from "../assets/portraitOrangeBg.png";
+import pixelArt from "../assets/portraitGreenBg.jpg";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css";
 const OverallContainer = styled.div`
@@ -90,7 +90,7 @@ const ImgContainer = styled.div`
 `;
 
 const Img = styled.img`
-  height: 380px;
+  height: 350px;
   width: 500px;
   z-index: 100;
   position: relative;
@@ -124,6 +124,18 @@ const ListsContainer = styled.div`
     width: 100%;
   }
 `;
+const CreditsContainer = styled.div`
+display:flex;
+justify-content: end;
+width:50%;
+color:white;
+margin-top:20px;
+`
+const CreditsLink = styled.a`
+font-size: 14px;
+color:#5ba9f0;
+
+`
 const BioPanel = () => {
   const [hover, setHover] = useState(false);
   return (
@@ -201,6 +213,8 @@ const BioPanel = () => {
                 style={hover ? { borderRadius: "10px" } : {}}
               />
             </ImgContainer>
+            <CreditsContainer> <CreditsLink href="https://www.stefanmorisset.com/">Photo by Stefan Morisset</CreditsLink></CreditsContainer>
+           
           </RightContainer>
         </MainContainer>
       </AnimationOnScroll>
